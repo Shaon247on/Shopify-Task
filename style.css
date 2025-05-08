@@ -6,6 +6,22 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+.h1 {
+  margin: 0px;
+}
+.h2 {
+  margin: 0px;
+}
+.h3 {
+  margin: 0px;
+}
+.h4 {
+  margin: 0px;
+}
+.h5 {
+  margin: 0px;
+}
+
 .product-section {
   padding-top: 51px;
   display: flex;
@@ -150,24 +166,24 @@ body {
   margin-left: 21px;
 }
 
-
 /* hero text section  */
 
-.rating-div{
+.rating-div {
   display: flex;
   align-items: center;
   justify-content: start;
 }
 
-.lable{
+.label {
+  margin: 0px;
   color: white;
   padding: 5px 20px 5px 5px;
-  background-color: #ED4444;
+  background-color: #ed4444;
   width: fit-content;
   border-radius: 5px;
 }
 
-.rating-start{
+.rating-start {
   margin-right: 20px;
   display: flex;
   align-items: center;
@@ -175,19 +191,64 @@ body {
   width: 73px;
 }
 
-.rating-count{
-  color: #3F474B;
+.rating-count {
+  color: #3f474b;
 }
-.rating-number{
-  color: #3F474B;
+.rating-number {
+  color: #3f474b;
   margin-right: 10px;
 }
+
+.hero-title {
+  margin: 0px;
+  font-size: 60px;
+  font-weight: 500;
+  color: #141b4d;
+}
+.comment-section {
+  background-color: #f2f2f6a8;
+  position: relative;
+  width: 438px;
+  height: 140px;
+  margin-top: 23px;
+  color: #3f446c;
+}
+
+.comment-section img {
+  position: relative;
+  left: 17px;
+  top: 14px;
+}
+
+.comment-text {
+  width: 396px;
+  padding: 14px 27px 19px 15px;
+}
+.quantity-section {
+  margin: 15px;
+}
+.quality-icon {
+  background: #3385ff;
+}
+
+.quantity-text {
+  margin: 0px;
+  font-size: 16px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: #00000033 solid 1px;
+  color: #141b4dcc;
+  font-weight: 400;
+}
+
 .price {
   font-size: 20px;
   margin: 10px 0;
 }
 
 .compare-price {
+  color: #00000099;
+  font-size: 28px;
   text-decoration: line-through;
   color: gray;
   margin-left: 10px;
@@ -195,9 +256,34 @@ body {
 
 .quantity-control {
   display: flex;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
   margin: 15px 0;
 }
+
+.quantity-control button{
+  border-radius: 100%;
+  border: #E0E0EABD solid 1px;
+}
+#quantity{
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.selling-price{
+  color: #CF1010;
+  font-size: 38px;
+  font-weight: 500;
+}
+
 
 .quantity-control button {
   width: 30px;
@@ -220,6 +306,12 @@ body {
   cursor: pointer;
 }
 
+.action-section{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 5px;
+}
 .cart-drawer {
   position: fixed;
   top: 0;
@@ -272,6 +364,7 @@ body {
 }
 
 /* ----------------------------------------- mobile responsive----------------------------------------- */
+
 @media (max-width: 768px) {
   .logo-side {
     position: relative;
@@ -412,7 +505,15 @@ body {
     grid-row: span 1;
   }
 
+  .label {
+    display: none;
+  }
+
   .thumb:hover {
     border-color: #e4a112;
+  }
+
+  .hero-title {
+    font-size: 32px;
   }
 }
