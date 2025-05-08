@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helio Pet Product Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <button class="hamburger" id="hamburgerBtn">☰</button>
+      <div class="logo">
+        <h1>Helio <span class="logo-half">pet</span></h1>
+        <div class="logo-side">
+          <p class="logo-plus">+</p>
+          <p class="logo-tag">TM</p>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="navMenu">
+        <div class="dropdown">
+          <a href="#">Shop <span class="arrow">▼</span></a>
+          <div class="dropdown-menu">
+            <a href="#">All Products</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">New Arrivals</a>
+          </div>
+        </div>
+        <a href="#">Our Story</a>
+        <div class="dropdown">
+          <a href="#">Science <span class="arrow">▼</span></a>
+          <div class="dropdown-menu">
+            <a href="#">Research</a>
+            <a href="#">Ingredients</a>
+          </div>
+        </div>
+        <a href="#">Result</a>
+      </nav>
+
+      <div class="cart-icon">
+        <button id="openCartBtn">🛒</button>
+      </div>
+    </header>
+
+    <main class="product-section">
+      <div class="gallery-container">
+        <div class="main-image">
+          <img src="images/img1.png" id="displayImage" alt="Main Display" />
+        </div>
+        <div class="sub-image">
+          <img
+            src="images/img1.png"
+            class="thumb"
+            onclick="changeImage(this)"
+          />
+          <img
+            src="images/img2.png"
+            class="thumb"
+            onclick="changeImage(this)"
+          />
+          <img
+            src="images/img3.png"
+            class="thumb"
+            onclick="changeImage(this)"
+          />
+          <img
+            src="images/img4.png"
+            class="thumb"
+            onclick="changeImage(this)"
+          />
+        </div>
+      </div>
+      <div class="product-details">
+        <p class="lable">Best Seller</p>
+        <div class="rating-div">
+          <div class="rating-start">
+            <img src="images/star.png" alt="rating star" />
+            <img src="images/star.png" alt="rating star" />
+            <img src="images/star.png" alt="rating star" />
+            <img src="images/star.png" alt="rating star" />
+            <img src="images/star.png" alt="rating star" />
+          </div>
+          <h4 class="rating-number">4.9</h4>
+          <h4 class="rating-count">(1,021 reviews)</h4>
+        </div>
+        <h1>Helio Pet Pro</h1>
+        <p class="description">Max Strength device for Pain.</p>
+        <p class="price">
+          <span class="selling-price" data-price="349">$349.00</span>
+          <span class="compare-price" data-compare="399">$399.00</span>
+        </p>
+
+        <div class="quantity-control">
+          <button id="decrease">-</button>
+          <input
+            type="number"
+            id="quantity"
+            value="1"
+            min="1"
+            max="10"
+            readonly
+          />
+          <button id="increase">+</button>
+        </div>
+
+        <button id="add-to-cart">Add to Cart</button>
+      </div>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="closeCart">&times;</button>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <strong>Total: $<span id="cartTotal">0.00</span></strong>
+      </div>
+    </aside>
+
+    <div id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
