@@ -13,18 +13,22 @@ const cartTotalElem = document.getElementById('cartTotal');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateQuantity(change) {
-  let qty = parseInt(qtyInput.value) + change;
-  if (qty >= 1 && qty <= 10) {
-    qtyInput.value = qty;
+  let currentQty = parseInt(qtyInput.dataset.value);
+  let newQty = currentQty + change;
+  if (newQty >= 1 && newQty <= 10) {
+    qtyInput.dataset.value = newQty;
+    qtyInput.textContent = newQty;
     updatePriceDisplay();
   }
 }
 
 function updatePriceDisplay() {
   const unit = parseFloat(document.querySelector('.selling-price').dataset.price);
+  const mobileUnit = parseFloat(document.querySelector('.selling-mobile').dataset.price);
   const compare = parseFloat(document.querySelector('.compare-price').dataset.compare);
-  const qty = parseInt(qtyInput.value);
+  const qty = parseInt(qtyInput.dataset.value);
   document.querySelector('.selling-price').textContent = `$${(unit * qty).toFixed(2)}`;
+  document.querySelector('.selling-mobile').textContent = `$${(mobileUnit * qty).toFixed(2)}`;
   document.querySelector('.compare-price').textContent = `$${(compare * qty).toFixed(2)}`;
 }
 
@@ -74,7 +78,7 @@ increaseBtn.addEventListener('click', () => updateQuantity(1));
 decreaseBtn.addEventListener('click', () => updateQuantity(-1));
 
 addToCartBtn.addEventListener('click', () => {
-  const qty = parseInt(qtyInput.value);
+  const qty = parseInt(qtyInput.dataset.value);
   const price = parseFloat(document.querySelector('.selling-price').dataset.price);
   const name = document.querySelector('h1').textContent;
   cart.push({ name, qty, price });
