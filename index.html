@@ -116,7 +116,6 @@
             Laser Diodes.
           </h4>
         </div>
-        <p class="description">Max Strength device for Pain.</p>
         <p class="price">
           <span class="compare-price" data-compare="399">$399.00</span>
           <span class="selling-price" data-price="349">$349.00</span>
@@ -124,9 +123,9 @@
 
         <div class="action-section">
           <div class="quantity-control">
-            <button id="decrease">-</button>
-            <p id="quantity" data-value="1">1</p>
-            <button id="increase">+</button>
+            <button class="decrease">-</button>
+            <p class="quantity" data-value="1">1</p>
+            <button class="increase">+</button>
           </div>
 
           <div class="mobile-pricing">
@@ -136,9 +135,9 @@
               </p>
             </div>
             <div class="quantity-mobile">
-              <button id="decrease">-</button>
-              <p id="quantity" data-value="1">1</p>
-              <button id="increase">+</button>
+              <button class="decrease">-</button>
+              <p class="quantity" data-value="1">1</p>
+              <button class="increase">+</button>
             </div>
           </div>
 
@@ -155,13 +154,30 @@
       <img src="images/banner.png" />
     </section>
 
+    <!-- Reviews Section  -->
+
+    <section class="reviews-section">
+      <h2 class="reviews-title">Verified Reviews</h2>
+
+      <div class="reviews-rating">
+        <h3>4.8</h3>
+        <div class="rating-start">
+          <img src="images/star.png" alt="rating star" />
+          <img src="images/star.png" alt="rating star" />
+          <img src="images/star.png" alt="rating star" />
+          <img src="images/star.png" alt="rating star" />
+          <img src="images/star.png" alt="rating star" />
+        </div>
+      </div>
+    </section>
+
     <aside class="cart-drawer" id="cartDrawer">
       <div class="cart-header">
         <h2>Your Cart</h2>
         <button id="closeCart">&times;</button>
       </div>
       <div id="cartItems"></div>
-      <div class="cart-footer">
+      <div id="cartTotalWrapper">
         <strong>Total: $<span id="cartTotal">0.00</span></strong>
       </div>
     </aside>
